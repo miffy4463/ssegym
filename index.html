@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sunny | 여성 전문 헬스 트레이너</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: {
+            50: '#fdf2f9',
+            100: '#fce7f4',
+            200: '#fbcfea',
+            300: '#f8a8d8',
+            400: '#f472b6',
+            500: '#ec4899',
+            600: '#db2777',
+            700: '#be185d',
+          },
+          secondary: {
+            50: '#f5f3ff',
+            100: '#ede9fe',
+            200: '#ddd6fe',
+            300: '#c4b5fd',
+            400: '#a78bfa',
+            500: '#8b5cf6',
+            600: '#7c3aed',
+            700: '#6d28d9',
+          },
+        },
+        fontFamily: {
+          sans: ['Poppins', 'Noto Sans KR', 'sans-serif'],
+        },
+      },
+    },
+  }
+</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans bg-white text-slate-800 antialiased">
+
+<!-- Navigation -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/0">
+  <div class="max-w-6xl mx-auto px-6 flex items-center justify-between h-20">
+    <a href="#home" class="text-2xl font-extrabold bg-gradient-to-r from-primary-500 to-secondary-600 bg-clip-text text-transparent">Sunny</a>
+
+    <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+      <a href="#about" class="hover:text-primary-600 transition-colors">소개</a>
+      <a href="#skills" class="hover:text-primary-600 transition-colors">전문 분야</a>
+      <a href="#portfolio" class="hover:text-primary-600 transition-colors">포트폴리오</a>
+      <a href="#contact" class="hover:text-primary-600 transition-colors">연락처</a>
+      <a href="#contact" class="px-5 py-2 rounded-full bg-gradient-to-r from-primary-500 to-secondary-600 text-white font-semibold shadow-md shadow-primary-200 hover:shadow-lg hover:shadow-primary-300 transition-shadow">문의하기</a>
+    </div>
+
+    <button id="menuBtn" aria-label="메뉴 열기" class="md:hidden text-slate-700">
+      <svg id="menuIconOpen" xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      <svg id="menuIconClose" xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="md:hidden hidden bg-white/95 backdrop-blur-sm shadow-lg">
+    <div class="flex flex-col px-6 py-4 gap-4 text-slate-700 font-medium">
+      <a href="#about" class="mobile-link">소개</a>
+      <a href="#skills" class="mobile-link">전문 분야</a>
+      <a href="#portfolio" class="mobile-link">포트폴리오</a>
+      <a href="#contact" class="mobile-link">연락처</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-pink-50 via-white to-purple-50">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+
+  <div class="relative z-10 max-w-4xl mx-auto px-6 text-center pt-20">
+    <span class="reveal inline-block px-4 py-1.5 mb-6 rounded-full text-sm font-semibold text-primary-700 bg-primary-100/80 border border-primary-200">
+      여성 전문 헬스 트레이너
+    </span>
+    <h1 class="reveal text-5xl md:text-7xl font-extrabold leading-tight mb-6">
+      안녕하세요,<br>
+      <span class="bg-gradient-to-r from-primary-500 via-primary-600 to-secondary-600 bg-clip-text text-transparent">Sunny</span> 입니다
+    </h1>
+    <p class="reveal text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed">
+      여성의 몸과 마음을 이해하는 전문 트레이너로서,<br class="hidden md:block">
+      건강하고 지속 가능한 변화를 함께 만들어갑니다.
+    </p>
+    <div class="reveal flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="#contact" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-gradient-to-r from-primary-500 to-secondary-600 text-white font-semibold shadow-lg shadow-primary-200 hover:scale-105 transition-transform">
+        상담 신청하기
+      </a>
+      <a href="#portfolio" class="w-full sm:w-auto px-8 py-3.5 rounded-full border-2 border-primary-200 text-primary-700 font-semibold hover:bg-primary-50 transition-colors">
+        포트폴리오 보기
+      </a>
+    </div>
+  </div>
+
+  <a href="#about" class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-primary-400">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+    </svg>
+  </a>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-24 bg-white">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-14 items-center">
+    <div class="reveal order-2 md:order-1">
+      <span class="text-primary-600 font-semibold text-sm tracking-wide uppercase">About Me</span>
+      <h2 class="text-3xl md:text-4xl font-extrabold mt-3 mb-6">여성만을 위한<br>맞춤형 트레이닝</h2>
+      <p class="text-slate-600 leading-relaxed mb-4">
+        저는 여성 회원님들의 신체적 특성과 라이프사이클을 깊이 이해하는 전문 헬스 트레이너입니다.
+        다이어트, 체형 교정, 산후 회복, 재활 트레이닝까지 각자의 상황에 맞는 맞춤형 프로그램을 설계합니다.
+      </p>
+      <p class="text-slate-600 leading-relaxed mb-8">
+        단순히 운동을 지도하는 것을 넘어, 안전하고 지속 가능한 습관을 만들어 평생 건강을 지킬 수 있도록
+        함께 고민하고 응원하는 파트너가 되어드립니다.
+      </p>
+      <div class="grid grid-cols-3 gap-4">
+        <div class="text-center p-4 rounded-2xl bg-primary-50">
+          <p class="text-2xl font-extrabold text-primary-600">7+</p>
+          <p class="text-xs text-slate-500 mt-1">경력 연차</p>
+        </div>
+        <div class="text-center p-4 rounded-2xl bg-secondary-50">
+          <p class="text-2xl font-extrabold text-secondary-600">300+</p>
+          <p class="text-xs text-slate-500 mt-1">회원 지도</p>
+        </div>
+        <div class="text-center p-4 rounded-2xl bg-primary-50">
+          <p class="text-2xl font-extrabold text-primary-600">98%</p>
+          <p class="text-xs text-slate-500 mt-1">재등록률</p>
+        </div>
+      </div>
+    </div>
+    <div class="reveal order-1 md:order-2 flex justify-center">
+      <div class="relative w-72 h-72 md:w-96 md:h-96">
+        <div class="absolute inset-0 rounded-full bg-gradient-to-br from-primary-300 to-secondary-400 blur-2xl opacity-40"></div>
+        <div class="relative w-full h-full rounded-full bg-gradient-to-br from-primary-100 to-secondary-100 border-4 border-white shadow-xl flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-32 h-32 text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.964 0a9 9 0 10-11.964 0m11.964 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="py-24 bg-gradient-to-b from-white to-primary-50/40">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="reveal text-center mb-16">
+      <span class="text-primary-600 font-semibold text-sm tracking-wide uppercase">Expertise</span>
+      <h2 class="text-3xl md:text-4xl font-extrabold mt-3">전문 분야</h2>
+      <p class="text-slate-500 mt-4 max-w-xl mx-auto">체계적인 이론과 풍부한 실전 경험을 바탕으로 한 전문 트레이닝 영역입니다</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="reveal skill-card">
+        <div class="skill-icon bg-primary-100 text-primary-600">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375" /></svg>
+        </div>
+        <h3 class="font-bold text-lg mb-2">퍼스널 트레이닝(PT)</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">1:1 맞춤 운동 프로그램으로 체형 교정, 다이어트, 근력 강화를 목표에 맞게 설계합니다.</p>
+      </div>
+
+      <div class="reveal skill-card">
+        <div class="skill-icon bg-secondary-100 text-secondary-600">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25z" /></svg>
+        </div>
+        <h3 class="font-bold text-lg mb-2">재활 트레이닝</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">부상 이후 회복, 자세 불균형 개선을 위한 안전한 재활 운동 프로그램을 제공합니다.</p>
+      </div>
+
+      <div class="reveal skill-card">
+        <div class="skill-icon bg-primary-100 text-primary-600">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 100-18 9 9 0 000 18z" /><path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5v4.5l3 1.5" /></svg>
+        </div>
+        <h3 class="font-bold text-lg mb-2">산후 회복 트레이닝</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">출산 후 신체 변화를 고려한 코어 회복, 체력 증진 프로그램을 안전하게 진행합니다.</p>
+      </div>
+
+      <div class="reveal skill-card">
+        <div class="skill-icon bg-secondary-100 text-secondary-600">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>
+        </div>
+        <h3 class="font-bold text-lg mb-2">바디 프로필 준비</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">목표 기간에 맞춘 체지방 감량 및 근육 라인 강조 프로그램으로 완성도를 높입니다.</p>
+      </div>
+
+      <div class="reveal skill-card">
+        <div class="skill-icon bg-primary-100 text-primary-600">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg>
+        </div>
+        <h3 class="font-bold text-lg mb-2">영양 코칭</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">운동 효과를 극대화하는 식단 가이드와 생활 습관 코칭을 함께 제공합니다.</p>
+      </div>
+
+      <div class="reveal skill-card">
+        <div class="skill-icon bg-secondary-100 text-secondary-600">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.708c.66-.366 1.06-1.028 1.06-1.749V4.797c0-1.108-1.15-1.83-2.13-1.337L15.6 5.4a1.5 1.5 0 01-1.35 0l-3.5-1.75a1.5 1.5 0 00-1.35 0L4.128 5.98A1.5 1.5 0 003.375 7.3v9.703c0 .653.399 1.239 1.008 1.478l4.875 1.921a1.5 1.5 0 001.15-.028l3.487-1.741a1.5 1.5 0 011.35 0l3.484 1.74" /></svg>
+        </div>
+        <h3 class="font-bold text-lg mb-2">그룹 클래스</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">소규모 여성 전용 그룹 클래스로 함께 동기부여하며 운동할 수 있습니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio Section -->
+<section id="portfolio" class="py-24 bg-white">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="reveal text-center mb-16">
+      <span class="text-primary-600 font-semibold text-sm tracking-wide uppercase">Portfolio</span>
+      <h2 class="text-3xl md:text-4xl font-extrabold mt-3">프로그램 &amp; 사례</h2>
+      <p class="text-slate-500 mt-4 max-w-xl mx-auto">실제 진행했던 프로그램과 회원 사례를 소개합니다 (샘플 콘텐츠)</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <article class="reveal portfolio-card">
+        <div class="portfolio-thumb bg-gradient-to-br from-primary-200 to-primary-400">
+          <span class="text-white/90 font-semibold">12주 다이어트 PT</span>
+        </div>
+        <div class="p-6">
+          <h3 class="font-bold text-lg mb-2">12주 바디체인지 프로그램</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">식단 관리와 주 3회 PT를 병행해 체지방 8% 감량, 근력 향상을 달성한 사례입니다.</p>
+        </div>
+      </article>
+
+      <article class="reveal portfolio-card">
+        <div class="portfolio-thumb bg-gradient-to-br from-secondary-200 to-secondary-400">
+          <span class="text-white/90 font-semibold">산후 회복 8주 과정</span>
+        </div>
+        <div class="p-6">
+          <h3 class="font-bold text-lg mb-2">산후 코어 회복 프로그램</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">출산 6개월 이후 회원을 대상으로 골반저근 강화와 코어 회복에 집중한 프로그램입니다.</p>
+        </div>
+      </article>
+
+      <article class="reveal portfolio-card">
+        <div class="portfolio-thumb bg-gradient-to-br from-primary-300 to-secondary-400">
+          <span class="text-white/90 font-semibold">바디 프로필 6주 준비반</span>
+        </div>
+        <div class="p-6">
+          <h3 class="font-bold text-lg mb-2">바디 프로필 완성 프로젝트</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">촬영일 기준 6주 역산 설계로 체지방 감량과 근육 라인 강조를 동시에 달성했습니다.</p>
+        </div>
+      </article>
+
+      <article class="reveal portfolio-card">
+        <div class="portfolio-thumb bg-gradient-to-br from-secondary-300 to-primary-400">
+          <span class="text-white/90 font-semibold">어깨/허리 재활 클래스</span>
+        </div>
+        <div class="p-6">
+          <h3 class="font-bold text-lg mb-2">거북목·라운드숄더 교정</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">장시간 앉아 근무하는 회원을 위한 자세 교정 및 통증 완화 재활 프로그램입니다.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-24 bg-gradient-to-br from-primary-50 via-white to-secondary-50">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <div class="reveal">
+      <span class="text-primary-600 font-semibold text-sm tracking-wide uppercase">Get in touch</span>
+      <h2 class="text-3xl md:text-4xl font-extrabold mt-3 mb-6">함께 건강한 변화를<br>만들어가요</h2>
+      <p class="text-slate-500 mb-12 max-w-xl mx-auto">상담 문의는 아래 연락처로 편하게 남겨주세요. 빠르게 답변드리겠습니다.</p>
+    </div>
+
+    <div class="reveal grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
+      <a href="mailto:sunny.trainer@example.com" class="contact-card">
+        <div class="skill-icon bg-primary-100 text-primary-600 mx-auto">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg>
+        </div>
+        <p class="font-semibold mt-4">Email</p>
+        <!-- TODO: 실제 이메일 주소로 교체하세요 -->
+        <p class="text-slate-500 text-sm mt-1">sunny.trainer@example.com</p>
+      </a>
+
+      <a href="https://github.com/sunny-trainer" target="_blank" rel="noopener noreferrer" class="contact-card">
+        <div class="skill-icon bg-secondary-100 text-secondary-600 mx-auto">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.754-1.333-1.754-1.089-.744.083-.729.083-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.605-2.665-.303-5.466-1.332-5.466-5.93 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23a11.5 11.5 0 013.003-.404c1.02.005 2.047.138 3.006.404 2.29-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.61-2.807 5.624-5.48 5.921.43.372.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293 0 .321.216.696.825.578C20.565 21.796 24 17.298 24 12c0-6.627-5.373-12-12-12z"/></svg>
+        </div>
+        <p class="font-semibold mt-4">GitHub</p>
+        <!-- TODO: 실제 GitHub 링크로 교체하세요 -->
+        <p class="text-slate-500 text-sm mt-1">github.com/sunny-trainer</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-8 bg-white border-t border-slate-100">
+  <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-slate-400">
+    <p>&copy; 2026 Sunny. All rights reserved.</p>
+    <p>Made with 💗 for a healthier life</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

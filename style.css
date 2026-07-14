@@ -1,0 +1,131 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navbar state toggled by script.js on scroll */
+#navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 1px 12px rgba(236, 72, 153, 0.08);
+}
+
+.mobile-link {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Hero background blobs */
+.blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(60px);
+  opacity: 0.35;
+  z-index: 0;
+}
+
+.blob-1 {
+  width: 22rem;
+  height: 22rem;
+  top: -4rem;
+  left: -6rem;
+  background: linear-gradient(135deg, #f472b6, #ec4899);
+  animation: float 9s ease-in-out infinite;
+}
+
+.blob-2 {
+  width: 26rem;
+  height: 26rem;
+  bottom: -6rem;
+  right: -8rem;
+  background: linear-gradient(135deg, #a78bfa, #7c3aed);
+  animation: float 11s ease-in-out infinite reverse;
+}
+
+.blob-3 {
+  width: 16rem;
+  height: 16rem;
+  top: 40%;
+  left: 60%;
+  background: linear-gradient(135deg, #f9a8d4, #c4b5fd);
+  animation: float 7s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(20px, -30px); }
+}
+
+/* Skill cards */
+.skill-card {
+  padding: 2rem;
+  border-radius: 1.25rem;
+  background: white;
+  border: 1px solid rgba(236, 72, 153, 0.08);
+  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(236, 72, 153, 0.15);
+}
+
+.skill-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+/* Portfolio cards */
+.portfolio-card {
+  border-radius: 1.25rem;
+  overflow: hidden;
+  background: white;
+  border: 1px solid rgba(139, 92, 246, 0.08);
+  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px rgba(139, 92, 246, 0.18);
+}
+
+.portfolio-thumb {
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Contact cards */
+.contact-card {
+  display: block;
+  padding: 2rem 1.5rem;
+  border-radius: 1.25rem;
+  background: white;
+  border: 1px solid rgba(236, 72, 153, 0.1);
+  box-shadow: 0 4px 20px rgba(236, 72, 153, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(236, 72, 153, 0.16);
+}
+
+/* Scroll reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
